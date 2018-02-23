@@ -1,35 +1,35 @@
 import React, { Component } from 'react';
 
+
 class Coats extends Component {
 
     render() {
-        // let coatsArr= this.props.coats
-        // console.log(coatsArr)
-        // let coatsJSX = coatsArr.map((coat) => {
-        //     console.log(coatsJSX)
-        //     return coatsArr.coat
-
-        // })
-
-
+        let coatsArr = this.props.coats
+        let coatsJSX = coatsArr.map((coat, i) => {
+            return <div key={i}>
+                <div className="card">
+                    <div className="card-image">
+                        <img alt="" src={coat.picture} />
+                        <span className="card-title">{coat.name}</span>
+                        <p>Price:${coat.price}</p>
+                        <a className="btn-floating halfway-fab waves-effect waves-light red" onClick={()=>{this.props.addItemToCart(coat)}} ><i className="material-icons">add</i></a>
+                    </div>
+                    <div className="card-content">
+                        <p>{coat.caption}</p>
+                    </div>
+                </div>
+            </div>
+        })
 
         return (
             <div>
                 <header>
-                    <h3>Coats</h3>
+                    <h3>Coat Collection</h3>
                 </header>
+
                 <div className="row">
                     <div className="col s12 m6">
-                        <div className="card">
-                            <div className="card-image">
-                                <img alt="" src={this.props.coat.picture} />
-                                <span className="card-title">{this.props.coat.name}</span>
-                                <a className="btn-floating halfway-fab waves-effect waves-light red"><i className="material-icons">add</i></a>
-                            </div>
-                            <div className="card-content">
-                                <p>I am a very simple card. I am good at containing small bits of information. I am convenient because I require little markup to use effectively.</p>
-                            </div>
-                        </div>
+                        {coatsJSX}
                     </div>
                 </div>
             </div>
