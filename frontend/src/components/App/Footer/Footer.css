@@ -1,0 +1,17 @@
+.col.l6.s12 {
+    width: 100%;
+}
+
+.socialIcons {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 2rem  0  2rem  0;
+}
+
+path {
+    color:white;
+}
+
+#emailTxt {
+    font-size: 1.2rem;
+}

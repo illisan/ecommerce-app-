@@ -1,0 +1,10 @@
+.navLogo {
+    width: 120px;
+}
+ .dropdown-content li>a, .dropdown-content li>span{
+     color:#1565c0;
+ }
+
+ .cartIcon {
+     margin-right: 3%;
+ }
