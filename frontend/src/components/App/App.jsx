@@ -41,20 +41,22 @@ class App extends Component {
 
     this.setState({
       cart: this.state.cart,
-      cartQty: this.state.cartQty +1
+      cartQty: this.state.cartQty + 1
     });
   }
 
   render() {
-
+    console.log(this.state.cartQty)
     return (
       <div className="App">
-        <Nav />
+        <Nav
+          cartQty={this.state.cartQty}
+        />
         <Switch>
           <Route exact path='/' render={() => {
-            return <Home 
-            takeInUser={this.takeInUser}
-            username={this.state.username}/>
+            return <Home
+              takeInUser={this.takeInUser}
+              username={this.state.username} />
           }
           } />
           <Route path='/about' render={() => {
@@ -62,14 +64,15 @@ class App extends Component {
           }
           } />
           <Route path='/shop' render={() => {
-            return <Shop 
-            cart= {this.state.cart}
-            addItemToCart={this.addItemToCart} 
-            username={this.state.username}/>
+            return <Shop
+              cart={this.state.cart}
+              addItemToCart={this.addItemToCart}
+              username={this.state.username}
+            />
           }
           } />
         </Switch>
-        <Footer/>
+        <Footer />
       </div>
     );
   }

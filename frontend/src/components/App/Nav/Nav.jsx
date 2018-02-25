@@ -19,7 +19,10 @@ class Nav extends Component {
                                 <li><Link to="/about">About Us</Link></li>
                                 <li><Link to="#" className="dropdown-button" data-activates="dropdown1"><i className="material-icons right">arrow_drop_down</i>Shop</Link></li>
                             </ul>
-                            <a className="right cartIcon"><Link to="/shop/cart"><i className="material-icons">shopping_cart</i></Link></a>
+                            <a className="right cartIcon"><Link to="/shop/cart">
+                            <a href=""><span className="new badge">{this.props.cartQty}</span></a>
+                            <i className="material-icons">shopping_cart</i>
+                            </Link></a>
                         </div>
                     </nav>
                 </div>

@@ -8,3 +8,7 @@
  .cartIcon {
      margin-right: 3%;
  }
+
+ span.badge.new {
+     background-color: #e65100;
+ }
