@@ -5,6 +5,7 @@ import About from './About/About'
 import Shop from './Shop/Shop'
 import Nav from './Nav/Nav'
 import Footer from './Footer/Footer'
+import axios from 'axios'
 
 import './App.css';
 
@@ -20,6 +21,31 @@ class App extends Component {
       cartQty: 0,
     }
   }
+
+  componentDidMount() {
+
+    axios.get(`http://localhost:8080/getcart`)
+      .then((response) => {
+        console.log(response.data)
+        this.setState({
+          cart: response.data.cart
+        })
+      })
+  }
+
+
+
+  componentDidUpdate() {
+    axios.post('http://localhost:8080/postcart', {
+      cart: this.state.cart
+    })
+      .then((response) => {
+        if (response.data.success) {
+          console.log('Cart Items Saved')
+        }
+      })
+  }
+
 
   takeInUser = (event, username) => {
     event.preventDefault()
@@ -44,6 +70,8 @@ class App extends Component {
       cartQty: this.state.cartQty + 1
     });
   }
+
+
 
   render() {
     console.log(this.state.cartQty)
