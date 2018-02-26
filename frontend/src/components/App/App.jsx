@@ -34,7 +34,6 @@ class App extends Component {
   }
 
 
-
   componentDidUpdate() {
     axios.post('http://localhost:8080/postcart', {
       cart: this.state.cart
@@ -58,7 +57,6 @@ class App extends Component {
   }
 
 
-
   addItemToCart = (item) => {
     console.log(item)
 
@@ -71,6 +69,16 @@ class App extends Component {
     });
   }
 
+  removeItem = (cartIndex) => {
+    
+    let newCartArr = [...this.state.cart]; 
+    newCartArr.splice(cartIndex, 1)
+
+    this.setState({
+      cart: newCartArr,
+      cartQty: this.state.cartQty - 1
+    })
+  }
 
 
   render() {
@@ -96,6 +104,7 @@ class App extends Component {
               cart={this.state.cart}
               addItemToCart={this.addItemToCart}
               username={this.state.username}
+              removeItem={this.removeItem}
             />
           }
           } />

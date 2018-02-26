@@ -3,26 +3,6 @@ import './Cart.css';
 
 class Cart extends Component {
 
-    //     //when clicked on add
-    //     //axios will post data to express server localhost:8080/cart
-    //     //
-    //     //
-
-
-    //     addItem = () => {
-    //         axios.post('http://localhost.8080', item)
-    //         this.setState ({
-
-    //         })
-    //     }
-
-
-    //     componentDidUpdate () {
-    //     axios.get('url', (req,res) => {
-
-    //     })
-    // }
-
     render() {
 
         let cartArr = this.props.cart
@@ -32,6 +12,8 @@ class Cart extends Component {
                     <img src={item.picture} alt="" className="circle" />
                     <span className="itemTitle">{item.name} </span>
                     <p className="secondary-content"><i className="material-icons">attach_money</i>{item.price}</p>
+                    <a class="btn-floating btn-large waves-effect waves-light red" onClick={() => { this.props.removeItem(item) }} ><i class="material-icons">clear</i></a>
+
                 </li>
             </div>
         })
@@ -53,7 +35,7 @@ class Cart extends Component {
 
                 <ul className="collection">
                     {cartJSX}
-                    {cartTotal}
+                    <h4>Total: ${cartTotal} CAD</h4>
                 </ul>
             </div>
         )

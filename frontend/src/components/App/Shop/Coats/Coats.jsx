@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import './Coats.css';
 
 
 class Coats extends Component {
@@ -11,11 +12,11 @@ class Coats extends Component {
                     <div className="card-image">
                         <img alt="" src={coat.picture} />
                         <span className="card-title">{coat.name}</span>
-                        <p>Price:${coat.price}</p>
+                        <p className="itemPrice">Price: ${coat.price} CAD</p>
                         <a className="btn-floating halfway-fab waves-effect waves-light  orange darken-3" onClick={() => { this.props.addItemToCart(coat) }} ><i className="material-icons">add</i></a>
                     </div>
                     <div className="card-content">
-                        <p>{coat.caption}</p>
+                        <p className="itemCap">{coat.caption}</p>
                     </div>
                 </div>
             </div>

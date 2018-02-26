@@ -9,6 +9,11 @@
     color: skyblue;
   }
 
+  input#first-name {
+    color: white;
+    font-size: 1.3rem;
+  }
+
  .heroCopy {
     margin-top:0;
     color: rgba(242, 241, 241, 0.91);

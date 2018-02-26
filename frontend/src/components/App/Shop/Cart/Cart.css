@@ -7,9 +7,15 @@
     height:220px;
 }
 
-.itemTitle {
-    font-size: 1.5rem;
+.card .card-title {
+    font-size: 2rem;
     font-weight: 600;
+    text-shadow: 2px 2px grey;
+}
+
+span.itemTitle {
+    font-size: 1.3rem;
+    font-weight: 800;
 }
 
 .secondary-content{

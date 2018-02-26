@@ -46,42 +46,42 @@ class Shop extends Component {
                     price: 230,
                     picture: '/imgs/coats/anca.jpg',
                     type: 'coat',
-                    caption: 'The Anca is stylish and versatile. Crafted from baby alpaca and merino wool, this pristine duffle coat is both cozy and classy.'
+                    caption: 'This coat is bold, timeless and essential. Crafted from baby alpaca and merino wool.'
                 },
                 {
                     name: 'Hana Alpaca Wool Coat',
                     price: 180,
                     picture: '/imgs/coats/hana.jpg',
                     type: 'coat',
-                    caption: 'The Hana is sophisticated, edgy, and geometrically flawless. This coat will keep you warm and elegant through winter. '
+                    caption: 'This coat is bold, timeless and essential. Crafted from baby alpaca and merino wool.'
                 },
                 {
                     name: 'Nina Alpaca Wool Coat-Camel',
                     price: 200,
                     picture: '/imgs/coats/nina.jpg',
                     type: 'coat',
-                    caption: 'The Nina is bold, timeless and essential.  Crafted from baby alpaca and merino wool, this coat is inspired by the classic English trench'
+                    caption: 'This coat is bold, timeless and essential. Crafted from baby alpaca and merino wool.'
                 },
                 {
                     name: 'Nina Alpaca Wool Coat-Black',
                     price: 200,
                     picture: '/imgs/coats/nina_black.jpg',
                     type: 'coat',
-                    caption: 'The Nina is bold, timeless and essential.  Crafted from baby alpaca and merino wool, this coat is inspired by the classic English trench'
+                    caption: 'This coat is bold, timeless and essential. Crafted from baby alpaca and merino wool.'
                 },
                 {
                     name: 'Rumi Alpaca Wool Coat',
                     price: 180,
                     picture: '/imgs/coats/rumi.jpg',
                     type: 'coat',
-                    caption: 'The Rumi is feminine and assertive.This coat pairs wonderfully over evening wear and can be worn all - year around.'
+                    caption: 'This coat is bold, timeless and essential. Crafted from baby alpaca and merino wool.'
                 },
                 {
                     name: 'Sami Alpaca Wool Coat',
                     price: 200,
                     picture: '/imgs/coats/sami.jpg',
                     type: 'coat',
-                    caption: 'The Sami embodies beauty in simplicity. This classic duffle coat, is feminine, delicate and will become your wardrobe staple.'
+                    caption: 'This coat is bold, timeless and essential. Crafted from baby alpaca and merino wool.'
                 },
 
             ]
@@ -114,6 +114,7 @@ class Shop extends Component {
                         return <Cart
                         cart= {this.props.cart}
                         username={this.props.username}
+                        removeItem={this.props.removeItem}
                         />
                     }}
                     />
